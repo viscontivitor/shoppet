@@ -1,0 +1,626 @@
+/* Vitor página de produtos */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Ubuntu:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@300&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Gantari', sans-serif;
+}
+*{
+    text-decoration: none;
+}
+/*Grid mantendo a estrura toda em coluna(Header Main Footer)*/
+#container{
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "main" "footer";
+}
+/*Cabeçalho inicio*/
+#container header{
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    background: #264653;
+    box-sizing:border-box;
+    box-shadow: 1px 3px 15px #264653;
+    height: 75px;
+
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: #eee;
+    gap: 600px;
+}
+/*Inicio do logo*/
+header .box-logo{
+    width: 225px;
+}
+header .logo{
+    color: #e9c46a;
+    font-size: 22px;
+    font-weight: bolder;
+}
+header .logo:hover{
+    font-size: 27px;
+    transition:.2s linear;
+}
+header .logo img{
+    display: flex;
+    width: 35%;
+    align-self: center;
+    margin-top: 0%;
+}
+/*Término das modificações do logo*/
+
+/*Barra de navegação, modificando dropdown menu e icones*/
+.navbar{
+    position:fixed;
+    display: flex;
+}
+/*Dropdown menu*/
+.dropdown{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 38px;
+    left: 0px;
+    background: #264653;
+    box-sizing:border-box;
+    box-shadow: 1px 3px 15px #264653;
+}
+.menu li{
+    width: 100%;
+    position: relative;
+    float: left;
+    border-left: 1px solid #010101;
+    list-style: none;
+}
+.menu li:first-child{border: none;}
+.menu a{
+    color: #264653;
+    text-decoration: none;
+    padding: 5px 13px;
+    display: block;
+}
+.menu a:hover{
+    background: #264653;
+    color: #fff;
+}
+.menu .dropdown a{ color:#eee}
+.menu .dropdown li{ border: none}
+.menu li:hover ul{ display: block}
+.menu li ul li:hover ul{display: block;}
+/*Término dropdown menu*/
+header .navbar a{
+    font-size: 18px;
+    border-radius:40px;
+    padding: 8px 20px;
+    color:#eee;
+}
+.menu .dropdown li ul{
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    background: #fff;
+    display: none;
+}
+header .navbar a:hover{
+    color: #fff;
+    background-color: #e9c46a;
+}
+header .fa-bars, .fa-search, .fa-shopping-cart, .fa-user{
+    cursor: pointer;
+    margin-left: 5px;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: #eee;
+    border-radius:50%;
+}
+header .icons .fa-bars:hover, .fa-search:hover, .fa-shopping-cart:hover, .fa-user:hover{
+    color: #eee;
+    background: #e9c46a;
+    transform: rotate(360deg);
+    transition: .3s linear;
+}
+/*Menu oculto para se tornar responsivo (Não terminado)*/
+header .icons #menu-bars{
+    display: none;
+}
+/*Barra de pesquisa oculta*/
+.search-form{
+    display: flex;
+    position: absolute;
+    top: -500%; right:2rem;
+    background: rgb(255, 255, 255);
+    box-sizing:border-box;
+    box-shadow: 1px 10px 10px rgb(133, 132, 132);
+    width: 385px;
+    height: 52px;
+    transition: .3s linear;
+}
+.search-form.active{
+    display:flex;
+    align-items: center;
+    top: 120%; right:2rem;
+}
+.search-form input{
+    height: 100%;
+    width: 95%;
+    padding:0 20px;
+    font-size:  18px;
+    color: #000;
+    text-transform: none;
+    border: none;
+}
+label{
+    font-size: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+/*Término barra de pesquisa*/
+
+/*Inicio carrinho de compra*/
+.shopping-cart{
+    display:flex;
+    position: absolute;
+    top: -500%; right: 2rem;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 1px 10px 10px rgb(204, 204, 204);
+    min-width: 325px;
+    padding: 10px;
+    transition: .3s linear;
+}
+.shopping-cart.active{
+    display: inline-block;
+    top: 120%; right: 2rem;
+    transition: .16s linear;
+
+}
+.box-cart-buy{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.header-cart-buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #264653;
+    width: 100%;
+    height: 35px;
+    font-size: 22px;
+    color: #e9c46a;
+    border-radius: 5px;
+}
+.btn-cart-buy{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 5px;
+    background-color: #264653;
+    color: #e9c46a;
+    font-size: 18px;
+    cursor: pointer;
+    width: 85%;
+    text-align: center;
+}
+.btn-cart-buy:hover{
+    letter-spacing: 2px;
+    transition: .2s linear;
+}
+/*Término carrinho de compra*/
+
+/*Inicio do formulário de login*/
+.login-form{
+    position: absolute;
+    top: -800%; right: 2rem;
+    background-color: #264653;
+    border-radius: 5px;
+    box-shadow: 1px 10px 10px rgb(204, 204, 204);
+    width: 350px;
+    transition: .2s linear;
+}
+.login-form.active{
+    display: inline-block;
+    top: 120%; right: 2rem;
+}
+.login-form h3{
+    margin-top: 10px;
+    color: #e9c46a;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.login-form .box-login{
+    margin: 11px;
+    border: solid 1px #e9c46a;
+    padding: 13px 11px;
+    font-size: 1rem;
+    color: #264653;
+    text-transform: none;
+    width: 85%;
+}
+.remember{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 5px 0;
+    padding-left:7px; ;
+}
+.login-form label{
+    font-size: 1;
+    color: #e9c46a;
+    cursor: pointer;
+}
+.btn-login-form{
+    margin: 10px 7%;
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 5px;
+    border: 0.2px solid #e9c46a;
+    background-color: #264653;
+    color: #e9c46a;
+    font-size: 18px;
+    cursor: pointer;
+    width: 85%;
+}
+.btn-login-form:hover{
+    letter-spacing: 1px;
+    transition: .3s linear;
+}
+.login-form p{
+    color: #e9c46a;
+    padding: 10px;
+    font-size:14px;
+}
+.login-form a{
+    color: #f4a261;
+}
+.login-form a:hover{
+    text-decoration: underline;
+}
+/*Término do formulário de login*/
+
+/*Término da barra de navegação*/
+/*Cabeçalho término*/
+
+
+/**Início da sessão de produtos*/
+
+#produtoscontainer{
+    grid-area: "main";
+}
+#produtosrow1{    
+    display: flex;
+    width:100%;  
+    align-items: center;
+    justify-content: center;
+}
+#produtosrow2{
+    display: flex;
+    width:100%;  
+    align-items: center;
+    justify-content: center;
+}
+#produtosrow3{
+    display: flex;
+    width:100%;  
+    align-items: center;
+    justify-content: center;
+}
+.imagem{  
+    display:block;
+    width:200px;  
+    text-align: center;
+}
+
+.boxproduto{
+    position:relative;
+    height:200px;
+    width:200px; 
+    padding: 20px;
+    cursor: pointer;
+}
+.overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 40px;
+    background: #06d6a0; 
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0;
+    transition: 1s;
+}
+.boxproduto:hover .overlay{
+    opacity:1;
+}
+.linkcompra{
+    text-decoration:none;
+    color: #fff;
+    transition: 0.5s;
+}
+.linkcompra:hover{
+       transform:translate(0,-20%);
+       transition: 0.5s;    
+}
+/* Inicio do rodapé */
+footer{
+    grid-area: footer;
+    position: relative;
+    top:0; 
+    left: 0; 
+    right:0;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#container footer ul{list-style-type:none;}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    width: 100%;
+}
+.info-footer{
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    justify-content: space-around;
+}
+.info-footer h3{
+    font-size: 2rem;
+    font-weight: 900;
+    color: #eee;
+    padding-bottom: 1%;
+    border-bottom: 0.5px solid #fff;
+}
+.sobre-nos{
+    width: 33.33%;
+    padding: 1%;
+    color: #eee;
+}
+.link1{
+    width: 33.33%;
+    padding: 1%;
+}
+footer .link1 a{
+    font-size: 100%;
+}
+.link1 a:hover{
+    text-decoration: underline;
+}
+.atendimento{
+    color: #fff;
+    padding: 1%;
+}
+.promotions{
+    display: flex;
+    justify-content: center;
+    border-top: 0.5px solid #fff;
+    border-bottom: 0.5px solid #fff;
+    width: 100%;
+}
+.form-promotions{
+    padding: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    height: 3rem;
+}
+.form-promotions input{
+    width: 35%;
+    border: none;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 1px 1px 10px rgb(146, 145, 145);
+    display: flex;
+    text-align: center;
+}
+.form-promotions button{
+    width: 10%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #df3c0a;
+    color: #fff;
+    box-shadow: 1px 1px 10px #c73306;
+}
+.form-promotions button:hover{
+    background-color: #a52d08;
+}
+.social-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 82%;
+    background-color: #333;
+    
+}
+.ajustes-social-btns .buttonsocialmedia{
+    background-color: #333;
+    border: none;
+}
+.ajustes-social-btns{
+    display: flex;
+    gap: 20%;
+    padding: 1%;
+    background-color: #333;
+}
+.ajustes-social-btns button i{
+    font-size: 5rem;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+}
+.ajustes-social-btns{
+    background-color: #333;
+}
+.ajustes-social-btns .social-media-btn{
+    font-size: 5rem;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+}
+.fa-linkedin{
+    color: #264653;
+}
+.fa-linkedin:hover{
+    -webkit-animation-name: social-btns;
+    -webkit-animation-duration: 2.4s;
+    -webkit-animation-iteration-count: 0s;
+}
+.fa-twitter{
+    color: #3b90ff;
+}
+.fa-twitter:hover{
+    -webkit-animation-name: social-btns;
+    -webkit-animation-duration: 2.4s;
+    -webkit-animation-iteration-count: 0s;
+}
+.fa-facebook{
+    color: #215497;
+}
+.fa-facebook:hover{
+    -webkit-animation-name: social-btns;
+    -webkit-animation-duration: 2.4s;
+    -webkit-animation-iteration-count: 0s;
+}
+.fa-instagram{
+    color: #e95950;
+}
+.fa-instagram:hover{
+    -webkit-animation-name: social-btns;
+    -webkit-animation-duration: 2.4s;
+    -webkit-animation-iteration-count: 0s;
+}
+@keyframes social-btns {
+    0% {
+        transform:translatey(0%);
+    }
+    20% {
+        transform:translateY(-10%) scale(1.08);
+    }
+}
+/* Término do rodapé */
+
+
+
+@media (max-width:1418px){
+    
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 9%; left: 0; right: 0;
+        background: #264653;
+        border-top: 0.16px solid rgba(0, 0, 0, .2);
+        border-bottom: 0.16px solid rgba(0, 0, 0, .2);
+        padding: 15px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar a{
+        color: #010101;
+    }
+    header .navbar .dropdown{
+        display: none;
+    }
+
+    header .navbar{
+        display: flex;
+        flex-direction: column;
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+        display:block;
+        padding:1.5rem;
+        margin:15.6px;
+        font: size 29px;;
+        background: #e6e6e6;
+    }
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
+    }
+    main .img-banner{
+        width: 650px;
+    }
+    .other-services-text{
+        margin-bottom: 5%;
+        position: relative;
+    }
+    footer .rede-social-footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3px;
+    }
+    main .services{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5%;
+        align-items: center;
+    }
+    main .others-services{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 2.5rem;
+    }
+    main .animation-rainbow-text{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+        font-size: 320%;
+        }
+    }
+    .dog-main{
+        display: none;
+    }
