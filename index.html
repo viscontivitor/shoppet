@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicolas Moura">
+    <!--Link CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/produtos.css">
+    <title>Shop Pet</title>
+</head>
+
+<body>
+    <div id="container">
+        <!--Inicio do cabeçalho-->
+        <header class="header">
+            <!--Logo-->
+            <div class="box-logo">
+                <h1 class="logo">
+                 <a href="index.html"><span><img src="image/logoshoppet.png" alt="logo Shop Pet"></span></a>
+                </h1>
+            </div>
+            <!--Navegação cabeçalho-->
+            <nav class="navbar">
+                <a href="index.html">Página inicial</a>
+                <ul class="menu">
+                    <li>
+                        <a href="produtos.html">Ir ás compras &#9660;</a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="#">Acessórios</a>
+                            </li>
+                            <li>
+                                <a href="#">Remédios</a>
+                            </li>
+                            <li>
+                                <a href="#">Rações</a>
+                            </li>
+                            <li>
+                                <a href="#">Brinquedos</a>
+                            </li>
+                            <li>
+                                <a href="#">Não sei 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Não sei 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Não sei 3</a>
+                            </li>
+                            <li>
+                                <a href="#">Não sei 4</a>
+                            </li>
+                            <li>
+                                <a href="#">Não sei 5</a>
+                            </li>
+                            <li>
+                                <a href="#">Não sei 6</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="#sobre">Sobre</a>
+                <a href="adocao.html">Adoção</a>
+                <a href="#contatos">Contatos</a>
+            </nav>
+            <!--Término da Navegação cabeçalho-->
+            <!-- icones de carrinho, Perfil, pesquisa e menu responsivo-->
+            <div class="icons">
+                <i id="menu-bars" class="fas fa-bars"></i>
+                <i id="search-btn" class="fas fa-search"></i>
+                <a id="cart-btn" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
+            <!-- Barra de pesquisa oculta -->
+            <form action="" class="search-form">
+                <input type="search" placeholder="Procure aqui..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+            <!-- Carrinho de compra oculto -->
+            <div class="shopping-cart">
+                <div class="header-cart-buy">
+                    Carrinho
+                </div>
+                <div class="box-cart-buy">
+
+                </div>
+                <div class="box-cart-buy">
+
+                </div>
+                <div class="box-cart-buy">
+
+                </div>
+                <div class="box-cart-buy">
+
+                </div>
+                <a href="pagamentos.html" class="btn-cart-buy">Finalizar compra</a>
+            </div>
+
+            <!-- Formulário de login oculto -->
+            <form action="" class="login-form">
+                <h3>Entre aqui</h3>
+                <input type="email" placeholder="entre com seu email aqui" class="box-login">
+                <input type="password" placeholder="entre com sua senha aqui" class="box-login">
+                <div class="remember">
+                    <input type="checkbox" name="remember-me" id="remember-me">
+                    <label for="remember-me">Lembrar de mim</label>
+                </div>
+                <input type="submit" value="Entre Agora" class="btn-login-form">
+                <p>Esqueceu a senha?
+                    <a href="#">Clique aqui</a>
+                </p>
+                <p>Não tem uma conta ainda?
+                    <a href="#">Crie uma agora</a>
+                </p>
+            </form>
+        </header>
+        <!--Término do cabeçalho-->
+
+        <!-- Inicio do corpo -->
+        <main class="main">
+            <div id="produtoscontainer">
+                <div id="produtosrow1">
+                    <div class="boxproduto">
+                        <div class="imagem">
+                            <img src="image/produto1.jpeg">
+                        </div>                      
+                        <div class="overlay">
+                            <a class="linkcompra" href="produto.html">Combo cão feliz</a>
+                        </div>
+                    </div>
+                    <div class="boxproduto">
+                        <div class="imagem">
+                            <img src="image/produto2.jpeg">
+                        </div>   
+                        <div class="overlay">
+                            <a class="linkcompra" href="#">Kit cão perfumado</a>
+                        </div>
+                    </div>
+                    <div class="boxproduto">
+                            <div class="imagem">
+                        <img src="image/produto3.jpeg">
+                             </div>
+                        <div class="overlay">
+                            <a class="linkcompra" href="#">Sanitário Pet</a>
+                        </div>
+                    </div>
+                    <div class="boxproduto">
+                            <div class="imagem">
+                        <img class="imagem" src="image/produto4.jpeg">
+                    </div>
+                        <div class="overlay">
+                            <a class="linkcompra" href="#">Comedor automático</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="produtosrow2">
+                    <div class="boxproduto">
+                            <div class="imagem">
+                        <img src="image/produto5.jpeg">
+                        </div>
+                        <div class="overlay">
+                            <a class="linkcompra" href="produto.html">Cumbuca transparente</a>
+                        </div>
+                    </div>
+                    <div class="boxproduto">
+                            <div class="imagem">
+                        <img src="image/produto6.jpeg">
+                        </div>
+                        <div class="overlay">
+                            <a class="linkcompra" href="produto.html">Comprimidos para carrapatos</a>
+                        </div>
+                    </div>
+                    <div class="boxproduto">
+                            <div class="imagem">
+                        <img src="image/produto7.jpeg">
+                        </div>
+                        <div class="overlay">
+                            <a class="linkcompra" href="produto.html">Biscrok</a>
+                        </div>
+                    </div>
+                    <div class="boxproduto">
+                            <div class="imagem">
+                        <img src="image/produto8.jpeg">
+                        </div>
+                        <div class="overlay">
+                            <a class="linkcompra" href="produto.html">Traqueia bovina</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="produtosrow3">
+                    <div class="boxproduto">
+                            <div class="imagem">
+                        <img src="image/produto9.jpeg">
+                            </div>
+                        <div class="overlay">
+                            <a class="linkcompra" href="produto.html">Ração nutrópica para papagaios</a>
+                        </div>
+                    </div>
+                    <div class="boxproduto">
+                            <div class="imagem">
+                    <img src="image/produto10.jpeg">
+                    </div>
+                        <div class="overlay">
+                            <a class="linkcompra" href="produto.html">Tubo para hamster</a>
+                        </div>
+                    </div>
+                   <div class="boxproduto">
+                        <div class="imagem">
+                     <img src="image/produto11.jpeg">
+                        </div>
+                        <div class="overlay">
+                            <a class="linkcompra" href="produto.html">Bebedouro automático</a>
+                        </div>
+                    </div>
+                    <div class="boxproduto">
+                            <div class="imagem">
+                            <img src="image/produto12.jpeg">
+                            </div>
+                            <div class="overlay">
+                            <a class="linkcompra" href="produto.html">Néctar para beija-flor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Término do corpo -->
+ <!-- Inicio do rodapé -->
+     <footer class="footer">
+        <div class="footer-content">
+            <div class="info-footer">
+                <div class="sobre-nos">
+                    <h3>Sobre nós</h3>
+                    <p>Texto aleatório que eu mesmo escrevi Texto aleatório que eu mesmo escrevi Texto aleatório que eu mesmo escrevi 
+                        Texto aleatório que eu mesmo escrevi Texto aleatório que eu mesmo escrevi
+                    </p>
+                </div>
+                <div class="link1">
+                    <h3>Institucional</h3>
+                    <ul>
+                        <li><a href="#">Políticas do site</a></li>
+                        <li><a href="#">Trabalhe conosco</a></li>
+                        <li><a href="#">Políticas de privacidade</a></li>
+                        <li><a href="#">Código de defesa do consumidor</a></li> 
+                    </ul>
+                </div>
+                <div class="atendimento">
+                    <h3>Atendimento</h3>
+                    <p>Horário de atendimento:<br>
+                        08:00 às 20:00<br>
+                        Segunda a Sábado<br>
+                        horário de Brasília<br>
+                        (Exceto domingo e feriados)<br>
+                        emailAtendimento@gmail.com
+                    </p>
+                </div>
+            </div>
+            <div class="promotions">
+                <form action="" class="form-promotions">
+                    <input type="text" placeholder="Digite seu e-mail aqui para receber novidades e promoções">
+                    <button class="btn-promotions">Enviar</button>
+                </form>
+            </div>
+            <div class="social-btns">
+                <div class="ajustes-social-btns">
+                    <button class="buttonsocialmedia">
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                    <button class="buttonsocialmedia">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button class="buttonsocialmedia">
+                        <i class="fab fa-facebook"></i>
+                    </button>
+                    <button class="buttonsocialmedia">
+                        <i class="fab fa-linkedin"></i>
+                    </button>
+                </div>
+           </div>
+        </div>
+    </footer>
+    <!-- Término do rodapé -->
+    </div>
+    <!--Link JavaScript-->
+    <script type="text/javascript" src="js/produtos.js"></script>
+</body>
+
+</html>
